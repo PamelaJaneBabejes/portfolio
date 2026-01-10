@@ -197,7 +197,10 @@
       <h3>PONDMATE: Requirement Specification</h3>
       <p>Complete system requirements and planned features for the PondMate fish pond management app.</p>
       <p><strong>Preview:</strong> 
-        <button onclick="togglePreview('doc1')" style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">Preview PDF</button>
+        <button onclick="previewPDF('doc1', 'PONDMATE.pdf')" 
+          style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">
+          Preview PDF
+        </button>
       </p>
       <iframe id="doc1" src="PONDMATE.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
@@ -207,7 +210,10 @@
       <h3>Municipal Civil Registrar: Requirement Specification</h3>
       <p>Documentation including workflows, system diagrams, and process descriptions for the MCR system.</p>
       <p><strong>Preview:</strong> 
-        <button onclick="togglePreview('doc2')" style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">Preview PDF</button>
+        <button onclick="previewPDF('doc2', 'Requirement Specification Document.pdf')" 
+          style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">
+          Preview PDF
+        </button>
       </p>
       <iframe id="doc2" src="Requirement Specification Document.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
@@ -217,13 +223,36 @@
       <h3>Sustainable Smart Agriculture: Final Paper</h3>
       <p>Final research paper and technical documentation highlighting system modeling and BPMN diagrams.</p>
       <p><strong>Preview:</strong> 
-        <button onclick="togglePreview('doc3')" style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">Preview PDF</button>
+        <button onclick="previewPDF('doc3', 'Final-Paper_Smart-Agriculture_1-1.pdf')" 
+          style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">
+          Preview PDF
+        </button>
       </p>
       <iframe id="doc3" src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
   </div>
 </section>
+
+<script>
+  function previewPDF(iframeId, fileUrl) {
+    // Detect mobile devices
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      // Open PDF in a new tab on mobile
+      window.open(fileUrl, '_blank');
+    } else {
+      // Toggle iframe visibility on desktop
+      const iframe = document.getElementById(iframeId);
+      iframe.style.display = (iframe.style.display === 'none') ? 'block' : 'none';
+      // Scroll into view if shown
+      if (iframe.style.display === 'block') {
+        iframe.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+</script>
+
 
 <script>
   function togglePreview(id) {
