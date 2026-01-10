@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamela Jane Babejes | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+    body {
+      background: #f5f0ff;
+      color: #2d1b4f;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6a0dad, #9b5de5);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    header h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 10px; }
+    header p { font-size: clamp(1rem, 3vw, 1.2rem); max-width: 600px; }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(10px); }
+      60% { transform: translateY(5px); }
+    }
+
+    section {
+      padding: clamp(50px, 8vw, 80px) clamp(20px, 10vw, 10%);
+      animation: fadeInUp 1s ease both;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #6a0dad;
+    }
+
+    p { line-height: 1.7; }
+
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .about img { max-width: 100%; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover { transform: translateY(-5px); }
+
+    .project-card h3 { margin-bottom: 10px; color: #4b0082; }
+    .project-card iframe { margin-top: 10px; border: 1px solid #ccc; border-radius: 10px; }
+
+    footer {
+      background: #2d1b4f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a { color: #dcbcff; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .about { grid-template-columns: 1fr; text-align: center; }
+      .projects { grid-template-columns: 1fr; }
+      .scroll-down { font-size: 0.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.5rem; }
+      section { padding: 40px 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Pamela Jane T. Babejes</h1>
+    <p>IT Undergraduate | Documentation • System Analyst • UI/UX Basics</p>
+    <div class="scroll-down">Swipe / Scroll Down ↓</div>
+  </header>
+
+  <!-- ABOUT ME -->
+  <section class="about" id="about">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        I am an Information Technology undergraduate from Camarines Norte State College with strong skills in documentation, system analysis, and visual modeling. I focus on translating complex requirements into clear system structures, diagrams, and user-centered designs.
+      </p>
+    </div>
+    <div>
+      <img src="me.jpg" alt="My Photo">
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section id="what-i-do">
+    <h2>What I Do</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>System Analyst</h3>
+        <p>I analyze user and business requirements, create system workflows, and design logical structures using ERDs, DFDs, BPMN, and system architecture diagrams.</p>
+      </div>
+      <div class="project-card">
+        <h3>Junior UI/UX Design</h3>
+        <p>I design intuitive and user-friendly interfaces by applying basic UI/UX principles, wireframing, layout planning, and usability-focused design.</p>
+      </div>
+      <div class="project-card">
+        <h3>Technical Documentation</h3>
+        <p>I produce well-structured technical documents, research papers, and system reports to support development, maintenance, and stakeholder communication.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <h3>PONDMATE: Fish Pond Management Mobile App</h3>
+        <img src="pondmateproject.jpg" alt="PondMateV1" style="width:100%; border-radius:10px; margin-bottom:15px;">
+        <p>A mobile-based fish production management app providing automated scheduling, calendar-based activities, and IoT-assisted fish feeding.</p>
+        <p><strong>Role:</strong> Front-end & back-end support, database handling, documentation lead.</p>
+        <p><strong>Skills:</strong> System Analysis, Database Handling, Technical Documentation</p>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <h3>Municipal Civil Registrar Digital Record System</h3>
+        <img src="MCR.jpg" alt="Municipal Civil Registrar" style="width:100%; border-radius:10px; margin-bottom:15px;">
+        <p>A digital record management system to organize, store, and manage civil registry records efficiently for a local government office.</p>
+        <p><strong>Role:</strong> Lead in documentation, process flows, and diagrams.</p>
+        <p><strong>Skills:</strong> System Documentation, Process Analysis, Requirements Writing</p>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <h3>Sustainable Smart Agriculture</h3>
+        <img src="sustainableagri.png" alt="Sustainable Smart Agriculture" style="width:100%; border-radius:10px; margin-bottom:15px;">
+        <p>Modeling sustainable aquaculture and agriculture processes using structured system and process modeling techniques.</p>
+        <p><strong>Role:</strong> Documentation lead for diagrams, process models, and technical documentation.</p>
+        <p><strong>Skills:</strong> BPMN Modeling, System Analysis, Technical Documentation</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DOCUMENTATION -->
+  <section id="documentation">
+    <h2>Documentation</h2>
+    <p style="margin-bottom:30px;">
+      Key project documents that highlight system specifications, research papers, and technical details. Preview them below.
+    </p>
+    <div class="projects">
+
+      <!-- DOC 1 -->
+      <div class="project-card">
+        <h3>PONDMATE: Requirement Specification</h3>
+        <p>Complete system requirements and planned features for the PondMate fish pond management app.</p>
+        <iframe src="PONDMATE.pdf" width="100%" height="300px"></iframe>
+      </div>
+
+      <!-- DOC 2 -->
+      <div class="project-card">
+        <h3>Municipal Civil Registrar: Requirement Specification</h3>
+        <p>Documentation including workflows, system diagrams, and process descriptions for the MCR system.</p>
+        <iframe src="Requirement Specification Document.pdf" width="100%" height="300px"></iframe>
+      </div>
+
+      <!-- DOC 3 -->
+      <div class="project-card">
+        <h3>Sustainable Smart Agriculture: Final Paper</h3>
+        <p>Final research paper and technical documentation highlighting system modeling and BPMN diagrams.</p>
+        <iframe src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="300px"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+<!-- SKILLS & TOOLS -->
+<section id="skills">
+  <h2>Skills & Tools</h2>
+  <p style="margin-bottom:30px;">
+    I have hands-on experience in programming, database handling, IoT, robotics, system analysis, and technical documentation. Here’s a visual overview of my skills:
+  </p>
+
+  <div class="skills-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
+
+    <!-- Technical / Programming Skills -->
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Java</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">HTML & CSS</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Python</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:70%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Database Analysis</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:80%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">IoT & Robotics</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:65%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <!-- System Analyst Skills -->
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Requirements Gathering</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Process Modeling (DFD/BPMN/ERD)</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">System Design & Architecture</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:80%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Technical Documentation</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:95%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Data Analysis</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+      <h3 style="color:#4b0082; margin-bottom:10px;">Communication & Stakeholder Management</h3>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
+        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SYSTEM ANALYST & IT PROJECT ASSISTANT APPROACH -->
+<section id="approach">
+  <h2>System Analyst & IT Project Assistant Approach</h2>
+  <p style="margin-bottom:30px;">
+    Here’s my structured approach for each role, highlighting steps and responsibilities.
+  </p>
+
+  <h3>System Analyst Approach</h3>
+  <ol style="counter-reset: sa-step; list-style: none; display:flex; flex-direction:column; gap:20px; margin-bottom:40px; padding-left:0;">
+    
+    <li style="counter-increment: sa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">1</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Requirements Gathering</h4>
+          <p>Meet with stakeholders to capture functional and non-functional requirements.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: sa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">2</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Process Modeling</h4>
+          <p>Use DFDs, ERDs, and BPMN diagrams to visualize workflows and data interactions.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: sa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">3</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">System Design</h4>
+          <p>Draft system architecture and identify database and interface needs.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: sa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">4</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Technical Documentation</h4>
+          <p>Create clear and detailed documentation for developers, QA, and stakeholders.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: sa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">5</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Communication</h4>
+          <p>Regularly update stakeholders and ensure alignment between business needs and technical solutions.</p>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+
+  <h3>IT Project Assistant Approach</h3>
+  <ol style="counter-reset: ipa-step; list-style: none; display:flex; flex-direction:column; gap:20px; padding-left:0;">
+    
+    <li style="counter-increment: ipa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">1</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Task Coordination</h4>
+          <p>Assist in planning, tracking, and organizing project activities efficiently.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: ipa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">2</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Documentation Support</h4>
+          <p>Maintain project logs, reports, and documents for transparency and reference.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: ipa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">3</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Progress Monitoring</h4>
+          <p>Track project milestones and assist project managers in meeting deadlines.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: ipa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">4</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Communication</h4>
+          <p>Liaise with team members and stakeholders to clarify requirements and share updates.</p>
+        </div>
+      </div>
+    </li>
+
+    <li style="counter-increment: ipa-step;">
+      <div class="skill-card" style="background:#f5f0ff; border-radius:12px; padding:20px; min-height:100px; display:flex; align-items:flex-start; gap:20px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">5</span>
+        <div>
+          <h4 style="color:#6a0dad; margin-top:0;">Problem Solving</h4>
+          <p>Help resolve minor issues and escalate larger concerns to the project manager promptly.</p>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+</section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: pamelajanetopularbabejes@gmail.com<br>
+       Phone: 0995 786 3021</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pamela Jane Babejes | <a href="#">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
