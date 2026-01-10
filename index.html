@@ -185,36 +185,52 @@
   </section>
 
   <!-- DOCUMENTATION -->
-  <section id="documentation">
-    <h2>Documentation</h2>
-    <p style="margin-bottom:30px;">
-      Key project documents that highlight system specifications, research papers, and technical details. Preview them below.
-    </p>
-    <div class="projects">
+<section id="documentation">
+  <h2>Documentation</h2>
+  <p style="margin-bottom:30px;">
+    Key project documents that highlight system specifications, research papers, and technical details. Click the "Preview" button to view the file.
+  </p>
+  <div class="projects">
 
-      <!-- DOC 1 -->
-      <div class="project-card">
-        <h3>PONDMATE: Requirement Specification</h3>
-        <p>Complete system requirements and planned features for the PondMate fish pond management app.</p>
-        <iframe src="PONDMATE.pdf" width="100%" height="300px"></iframe>
-      </div>
-
-      <!-- DOC 2 -->
-      <div class="project-card">
-        <h3>Municipal Civil Registrar: Requirement Specification</h3>
-        <p>Documentation including workflows, system diagrams, and process descriptions for the MCR system.</p>
-        <iframe src="Requirement Specification Document.pdf" width="100%" height="300px"></iframe>
-      </div>
-
-      <!-- DOC 3 -->
-      <div class="project-card">
-        <h3>Sustainable Smart Agriculture: Final Paper</h3>
-        <p>Final research paper and technical documentation highlighting system modeling and BPMN diagrams.</p>
-        <iframe src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="300px"></iframe>
-      </div>
-
+    <!-- DOC 1 -->
+    <div class="project-card">
+      <h3>PONDMATE: Requirement Specification</h3>
+      <p>Complete system requirements and planned features for the PondMate fish pond management app.</p>
+      <p><strong>Preview:</strong> 
+        <button onclick="togglePreview('doc1')" style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">Preview PDF</button>
+      </p>
+      <iframe id="doc1" src="PONDMATE.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
-  </section>
+
+    <!-- DOC 2 -->
+    <div class="project-card">
+      <h3>Municipal Civil Registrar: Requirement Specification</h3>
+      <p>Documentation including workflows, system diagrams, and process descriptions for the MCR system.</p>
+      <p><strong>Preview:</strong> 
+        <button onclick="togglePreview('doc2')" style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">Preview PDF</button>
+      </p>
+      <iframe id="doc2" src="Requirement Specification Document.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+    </div>
+
+    <!-- DOC 3 -->
+    <div class="project-card">
+      <h3>Sustainable Smart Agriculture: Final Paper</h3>
+      <p>Final research paper and technical documentation highlighting system modeling and BPMN diagrams.</p>
+      <p><strong>Preview:</strong> 
+        <button onclick="togglePreview('doc3')" style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">Preview PDF</button>
+      </p>
+      <iframe id="doc3" src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function togglePreview(id) {
+    const iframe = document.getElementById(id);
+    iframe.style.display = (iframe.style.display === 'none') ? 'block' : 'none';
+  }
+</script>
 
 <!-- SKILLS & TOOLS -->
 <section id="skills">
@@ -426,12 +442,14 @@
 </section>
 
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: pamelajanetopularbabejes@gmail.com<br>
-       Phone: 0995 786 3021</p>
-  </section>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    📧 Email: <a href="mailto:pamelajanetopularbabejes@gmail.com">pamelajanetopularbabejes@gmail.com</a><br>
+    📞 Phone: <a href="tel:+639957863021">0995 786 3021</a>
+  </p>
+</section>
 
   <!-- FOOTER -->
   <footer>
