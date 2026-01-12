@@ -127,24 +127,33 @@
 </nav>
 
 <style>
+
+  :root {
+  --nav-height: 60px;
+}
+
   /* NAV CONTAINER */
   .top-nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: rgba(106, 13, 173, 0.95);
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
+  position: sticky;
+  top: 0;
+  height: var(--nav-height);
+  width: 100%;
+  background: rgba(106, 13, 173, 0.95);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 
   .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
+  height: var(--nav-height);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
 
   .nav-logo {
     color: white;
@@ -176,6 +185,12 @@
     color: white;
     cursor: pointer;
   }
+
+  section {
+  scroll-margin-top: var(--nav-height);
+}
+
+
 
   /* MOBILE RESPONSIVE */
   @media (max-width: 768px) {
@@ -227,147 +242,257 @@
 
 
   <!-- HEADER -->
-  <header>
-    <h1>Pamela Jane T. Babejes</h1>
-    <p>IT Undergraduate | Documentation • System Analyst • UI/UX Basics</p>
-    <div class="scroll-down">Scroll Down ↓</div>
-  </header>
+  <!-- HEADER -->
+<header>
+  <h1>Pamela Jane T. Babejes</h1>
+  <p>IT Undergraduate | Documentation • System Analyst • UI/UX Basics</p>
+
+  <!-- CV & Resume Buttons -->
+  <div style="margin-top:20px; display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    
+    <!-- CV Button -->
+    <a href="PAMELA JANE BABEJES CV.pdf" download
+       style="background: #6a0dad; color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; text-decoration: none; display:flex; align-items:center; gap:10px; transition: all 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+       📄 Download CV
+    </a>
+
+    <!-- Resume Button -->
+    <a href="PAMELA JANE T BABEJES RESUME.pdf" download
+       style="background: #6a0dad; color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; text-decoration: none; display:flex; align-items:center; gap:10px; transition: all 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+       📝 Download Resume
+    </a>
+  </div>
+
+  <div class="scroll-down">Scroll Down ↓</div>
+</header>
+
+  
 
   <!-- ABOUT ME -->
-  <section class="about" id="about">
-    <div>
-      <h2>About Me</h2>
-      <p>
-        I am an Information Technology undergraduate from Camarines Norte State College with strong skills in documentation, system analysis, and visual modeling. I focus on translating complex requirements into clear system structures, diagrams, and user-centered designs.
-      </p>
-    </div>
-    <div>
-      <img src="me.jpg" alt="My Photo">
-    </div>
-  </section>
+<section class="about" id="about">
+  <div>
+    <h2>About Me</h2>
+    <p>
+      I am an Information Technology undergraduate from Camarines Norte State College with a strong focus on system analysis, technical documentation, and process modeling. I specialize in translating business and user requirements into clear, well-structured system specifications, visual diagrams, and organized documentation that support effective system development and project execution.
+    </p>
+  </div>
+  <div>
+    <img src="me.jpg" alt="My Photo">
+  </div>
+</section>
 
-  <!-- WHAT I DO -->
-  <section id="what-i-do">
-    <h2>What I Do</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>System Analyst</h3>
-        <p>I analyze user and business requirements, create system workflows, and design logical structures using ERDs, DFDs, BPMN, and system architecture diagrams.</p>
-      </div>
-      <div class="project-card">
-        <h3>Junior UI/UX Design</h3>
-        <p>I design intuitive and user-friendly interfaces by applying basic UI/UX principles, wireframing, layout planning, and usability-focused design.</p>
-      </div>
-      <div class="project-card">
-        <h3>Technical Documentation</h3>
-        <p>I produce well-structured technical documents, research papers, and system reports to support development, maintenance, and stakeholder communication.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-
-      <!-- PROJECT 1 -->
-      <div class="project-card">
-        <h3>PONDMATE: Fish Pond Management Mobile App</h3>
-        <img src="pondmateproject.jpg" alt="PondMateV1" style="width:100%; border-radius:10px; margin-bottom:15px;">
-        <p>A mobile-based fish production management app providing automated scheduling, calendar-based activities, and IoT-assisted fish feeding.</p>
-        <p><strong>Role:</strong> Front-end & back-end support, database handling, documentation lead.</p>
-        <p><strong>Skills:</strong> System Analysis, Database Handling, Technical Documentation</p>
-      </div>
-
-      <!-- PROJECT 2 -->
-      <div class="project-card">
-        <h3>Municipal Civil Registrar Digital Record System</h3>
-        <img src="MCR.jpg" alt="Municipal Civil Registrar" style="width:100%; border-radius:10px; margin-bottom:15px;">
-        <p>A digital record management system to organize, store, and manage civil registry records efficiently for a local government office.</p>
-        <p><strong>Role:</strong> Lead in documentation, process flows, and diagrams.</p>
-        <p><strong>Skills:</strong> System Documentation, Process Analysis, Requirements Writing</p>
-      </div>
-
-      <!-- PROJECT 3 -->
-      <div class="project-card">
-        <h3>Sustainable Smart Agriculture</h3>
-        <img src="sustainableagri.png" alt="Sustainable Smart Agriculture" style="width:100%; border-radius:10px; margin-bottom:15px;">
-        <p>Modeling sustainable aquaculture and agriculture processes using structured system and process modeling techniques.</p>
-        <p><strong>Role:</strong> Documentation lead for diagrams, process models, and technical documentation.</p>
-        <p><strong>Skills:</strong> BPMN Modeling, System Analysis, Technical Documentation</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- DOCUMENTATION -->
-<section id="documentation">
-  <h2>Documentation</h2>
-  <p style="margin-bottom:30px;">
-    Key project documents that highlight system specifications, research papers, and technical details. Click the "Preview" button to view the file.
-  </p>
+<!-- WHAT I DO -->
+<section id="what-i-do">
+  <h2>What I Do</h2>
   <div class="projects">
 
-    <!-- DOC 1 -->
     <div class="project-card">
-      <h3>PONDMATE: Requirement Specification</h3>
-      <p>Complete system requirements and planned features for the PondMate fish pond management app.</p>
-      <p><strong>Preview:</strong> 
-        <button onclick="previewPDF('doc1', 'PONDMATE.pdf')" 
-          style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">
-          Preview PDF
-        </button>
+      <h3>System Analyst</h3>
+      <p>
+        I analyze organizational and user requirements, document functional and non-functional needs, and develop system workflows such as writing SRS, and system architecture models to ensure clear alignment between business objectives and technical solutions.
       </p>
-      <iframe id="doc1" src="PONDMATE.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
-    <!-- DOC 2 -->
     <div class="project-card">
-      <h3>Municipal Civil Registrar: Requirement Specification</h3>
-      <p>Documentation including workflows, system diagrams, and process descriptions for the MCR system.</p>
-      <p><strong>Preview:</strong> 
-        <button onclick="previewPDF('doc2', 'Requirement Specification Document.pdf')" 
-          style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">
-          Preview PDF
-        </button>
+      <h3>IT Project Assistant</h3>
+      <p>
+        I support IT project activities by assisting in task coordination, progress tracking, requirements clarification, and documentation management, helping ensure projects are delivered on time and aligned with defined objectives.
       </p>
-      <iframe id="doc2" src="Requirement Specification Document.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
-    <!-- DOC 3 -->
     <div class="project-card">
-      <h3>Sustainable Smart Agriculture: Final Paper</h3>
-      <p>Final research paper and technical documentation highlighting system modeling and BPMN diagrams.</p>
-      <p><strong>Preview:</strong> 
-        <button onclick="previewPDF('doc3', 'Final-Paper_Smart-Agriculture_1-1.pdf')" 
-          style="background:#6a0dad; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer;">
-          Preview PDF
-        </button>
+      <h3>Technical Documentation</h3>
+      <p>
+        I develop comprehensive technical documents, requirement specifications, research papers, and system reports that facilitate communication between stakeholders, developers, and project teams.
       </p>
-      <iframe id="doc3" src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="300px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+      <h3>PONDMATE: Fish Pond Management Mobile Application with IoT-Based Fish Feeder</h3>
+      <img src="pondmateproject.jpg" alt="PondMateV1" style="width:100%; border-radius:10px; margin-bottom:15px;">
+      <p>
+        A mobile-based fish production management application designed to support automated production scheduling, calendar-based activity tracking, and IoT-assisted fish feeding operations.
+      </p>
+      <p><strong>Role:</strong> Lead System analyst, database handling, and lead for technical documentation.</p>
+      <p><strong>Key Skills Applied:</strong>System Artifacts,  System Analysis, Requirements Documentation</p>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+      <h3>Municipal Civil Registrar Digital Record System</h3>
+      <img src="MCR.jpg" alt="Municipal Civil Registrar" style="width:100%; border-radius:10px; margin-bottom:15px;">
+      <p>
+        A digital records management system developed to improve the organization, storage, and retrieval of civil registry documents for a local government office.
+      </p>
+      <p><strong>Role:</strong> Lead contributor for system documentation, process flow design, and requirements analysis.</p>
+      <p><strong>Key Skills Applied:</strong> Process Analysis, System Documentation, Requirements Writing</p>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+      <h3>Sustainable Smart Agriculture</h3>
+      <img src="sustainableagri.png" alt="Sustainable Smart Agriculture" style="width:100%; border-radius:10px; margin-bottom:15px;">
+      <p>
+        A system modeling project focused on sustainable aquaculture and agriculture, emphasizing structured process analysis and workflow visualization.
+      </p>
+      <p><strong>Role:</strong> Documentation lead responsible for BPMN diagrams, process models, and technical reports.</p>
+      <p><strong>Key Skills Applied:</strong> System Analysis, Technical Documentation</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DOCUMENTATION -->
+<section id="documentation">
+  <h2>Documentation</h2>
+  <p style="margin-bottom:30px;">
+    This section showcases key documentation artifacts that I fully led and developed as part of various system analysis and IT projects. 
+    These documents demonstrate my expertise in requirements analysis, process modeling, system documentation, and technical writing. 
+    Click the icons to <strong>Preview</strong> or <strong>Download</strong>.
+  </p>
+
+  <div class="projects">
+
+    <!-- DOC 1 -->
+    <div class="project-card">
+      <h3>PONDMATE: Requirement Specification</h3>
+      <p>
+        I led the full documentation process for this thesis and requirements specification, detailing the functional and non-functional requirements of the PondMate system. 
+        This involved end-to-end system analysis, requirements elicitation, workflow definition, and translating technical concepts into clear, structured documentation to ensure alignment between stakeholders and the development team.
+      </p>
+
+      <!-- ICON LINKS WITH TEXT -->
+      <div style="display:flex; gap:20px; margin-bottom:10px; font-size:1rem; align-items:center;">
+        <!-- Preview -->
+        <span 
+          onclick="previewPDF('doc1')" 
+          style="cursor:pointer; color:#6a0dad; display:flex; align-items:center; gap:5px;" 
+          title="Preview PDF">
+          &#128065; Preview
+        </span>
+
+        <!-- Download -->
+        <a 
+          href="PONDMATE.pdf" 
+          download 
+          style="color:#4b0082; display:flex; align-items:center; gap:5px; text-decoration:none; font-weight:600;" 
+          title="Download PDF">
+          &#128229; Download
+        </a>
+      </div>
+
+      <iframe
+        id="doc1"
+        data-src="PONDMATE.pdf"
+        width="100%"
+        height="300px"
+        style="display:none; border:1px solid #ccc; border-radius:10px;">
+      </iframe>
+    </div>
+
+    <!-- DOC 2 -->
+    <div class="project-card">
+      <h3>Municipal Civil Registrar: Requirement Specification</h3>
+      <p>
+        I led the documentation efforts for this digital record management system. 
+        My responsibilities included gathering requirements, documenting workflows, creating system diagrams, and translating manual procedures into structured digital processes.
+      </p>
+
+      <div style="display:flex; gap:20px; margin-bottom:10px; font-size:1rem; align-items:center;">
+        <span 
+          onclick="previewPDF('doc2')" 
+          style="cursor:pointer; color:#6a0dad; display:flex; align-items:center; gap:5px;" 
+          title="Preview PDF">
+          &#128065; Preview
+        </span>
+
+        <a 
+          href="Requirement Specification Document.pdf" 
+          download 
+          style="color:#4b0082; display:flex; align-items:center; gap:5px; text-decoration:none; font-weight:600;" 
+          title="Download PDF">
+          &#128229; Download
+        </a>
+      </div>
+
+      <iframe
+        id="doc2"
+        data-src="Requirement Specification Document.pdf"
+        width="100%"
+        height="300px"
+        style="display:none; border:1px solid #ccc; border-radius:10px;">
+      </iframe>
+    </div>
+
+    <!-- DOC 3 -->
+    <div class="project-card">
+      <h3>Sustainable Smart Agriculture: Final Paper</h3>
+      <p>
+        I led all documentation tasks for this research project, producing analytical and technical reports that clearly represented system workflows, stakeholder interactions, and operational processes.
+      </p>
+
+      <div style="display:flex; gap:20px; margin-bottom:10px; font-size:1rem; align-items:center;">
+        <span 
+          onclick="previewPDF('doc3')" 
+          style="cursor:pointer; color:#6a0dad; display:flex; align-items:center; gap:5px;" 
+          title="Preview PDF">
+          &#128065; Preview
+        </span>
+
+        <a 
+          href="Final-Paper_Smart-Agriculture_1-1.pdf" 
+          download 
+          style="color:#4b0082; display:flex; align-items:center; gap:5px; text-decoration:none; font-weight:600;" 
+          title="Download PDF">
+          &#128229; Download
+        </a>
+      </div>
+
+      <iframe
+        id="doc3"
+        data-src="Final-Paper_Smart-Agriculture_1-1.pdf"
+        width="100%"
+        height="300px"
+        style="display:none; border:1px solid #ccc; border-radius:10px;">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
 <script>
-  function previewPDF(iframeId, fileUrl) {
-    // Detect mobile devices
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-      // Open PDF in a new tab on mobile
-      window.open(fileUrl, '_blank');
-    } else {
-      // Toggle iframe visibility on desktop
-      const iframe = document.getElementById(iframeId);
-      iframe.style.display = (iframe.style.display === 'none') ? 'block' : 'none';
-      // Scroll into view if shown
-      if (iframe.style.display === 'block') {
-        iframe.scrollIntoView({ behavior: 'smooth' });
-      }
+  function previewPDF(iframeId) {
+    const iframe = document.getElementById(iframeId);
+
+    // Load PDF only when preview is clicked
+    if (!iframe.src) {
+      iframe.src = iframe.dataset.src;
+    }
+
+    // Toggle visibility
+    iframe.style.display =
+      iframe.style.display === 'none' ? 'block' : 'none';
+
+    if (iframe.style.display === 'block') {
+      iframe.scrollIntoView({ behavior: 'smooth' });
     }
   }
 </script>
+
 
 
 <script>
@@ -378,95 +503,125 @@
 </script>
 
 <!-- SKILLS & TOOLS -->
-<section id="skills">
-  <h2>Skills & Tools</h2>
-  <p style="margin-bottom:30px;">
+<section id="skills" style="padding:50px 20px; background:#f7f5ff; border-radius:15px; max-width:1200px; margin:50px auto;">
+  <h2 style="color:#6a0dad; font-size:2.5rem; margin-bottom:20px; text-align:center;">Skills & Tools</h2>
+  <p style="color:#333; font-size:1.1rem; margin-bottom:40px; text-align:center;">
     I have hands-on experience in programming, database handling, IoT, robotics, system analysis, and technical documentation. Here’s a visual overview of my skills:
   </p>
 
-  <div class="skills-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
+  <div class="skills-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:25px;">
 
-    <!-- Technical / Programming Skills -->
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Java</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+    <!-- Java -->
+<div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+    <span>💻</span> Java
+  </div>
+  <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+    <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
+  </div>
+</div>
+
+<!-- HTML & CSS -->
+<div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+    <span>🌐</span> HTML & CSS
+  </div>
+  <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+    <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
+  </div>
+</div>
+
+<!-- Database Analysis -->
+<div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+    <span>🗄️</span> Database Analysis
+  </div>
+  <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+    <div style="width:80%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
+  </div>
+</div>
+
+<!-- IoT & Robotics -->
+<div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+    <span>🤖</span> IoT & Robotics
+  </div>
+  <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+    <div style="width:65%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
+  </div>
+</div>
+
+
+    <!-- Requirements Gathering -->
+    <div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+        <span>📝</span> Requirements Gathering
+      </div>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
       </div>
     </div>
 
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">HTML & CSS</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+    <!-- Process Modeling -->
+    <div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+        <span>📊</span> Process Modeling
+      </div>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
       </div>
     </div>
 
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Python</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:70%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+    <!-- System Design & Architecture -->
+    <div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+        <span>🏗️</span> System Design & Architecture
+      </div>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+        <div style="width:80%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
       </div>
     </div>
 
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Database Analysis</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:80%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+    <!-- Technical Documentation -->
+    <div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+        <span>📄</span> Technical Documentation
+      </div>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+        <div style="width:95%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
       </div>
     </div>
 
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">IoT & Robotics</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:65%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+    <!-- Communication & Stakeholder Management -->
+    <div class="skill-card" style="background:linear-gradient(135deg,#f0e6ff,#d9ccff); border-radius:15px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:transform 0.3s;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px; font-size:1.3rem; font-weight:600; color:#4b0082;">
+        <span>🗣️</span> Communication & Stakeholder Management
       </div>
-    </div>
-
-    <!-- System Analyst Skills -->
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Requirements Gathering</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px;"></div>
-      </div>
-    </div>
-
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Process Modeling (DFD/BPMN/ERD)</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px;"></div>
-      </div>
-    </div>
-
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">System Design & Architecture</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:80%; height:100%; background:#6a0dad; border-radius:10px;"></div>
-      </div>
-    </div>
-
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Technical Documentation</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:95%; height:100%; background:#6a0dad; border-radius:10px;"></div>
-      </div>
-    </div>
-
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Data Analysis</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:85%; height:100%; background:#6a0dad; border-radius:10px;"></div>
-      </div>
-    </div>
-
-    <div class="skill-card" style="background:white; border-radius:12px; padding:15px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-      <h3 style="color:#4b0082; margin-bottom:10px;">Communication & Stakeholder Management</h3>
-      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%;">
-        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px;"></div>
+      <div style="background:#e0d7f7; border-radius:10px; height:15px; width:100%; overflow:hidden;">
+        <div style="width:90%; height:100%; background:#6a0dad; border-radius:10px; transition:width 1s;"></div>
       </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  /* Hover effect for all skill cards */
+  .skill-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  }
+</style>
+
+
+<style>
+  /* Hover effect for all skill cards */
+  .skill-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  }
+</style>
+
 
 <!-- SYSTEM ANALYST & IT PROJECT ASSISTANT APPROACH -->
 <section id="approach">
@@ -493,7 +648,7 @@
         <span style="background:#6a0dad; color:white; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem; flex-shrink:0;">2</span>
         <div>
           <h4 style="color:#6a0dad; margin-top:0;">Process Modeling</h4>
-          <p>Use DFDs, ERDs, and BPMN diagrams to visualize workflows and data interactions.</p>
+          <p>Writing SRS diagrams to visualize workflows and data interactions.</p>
         </div>
       </div>
     </li>
@@ -588,13 +743,31 @@
 
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📧 Email: <a href="mailto:pamelajanetopularbabejes@gmail.com">pamelajanetopularbabejes@gmail.com</a><br>
-    📞 Phone: <a href="tel:+639957863021">0995 786 3021</a>
+<section id="contact" style="padding:50px 20px; background:#f3f0ff; text-align:center; border-radius:15px; max-width:700px; margin:50px auto;">
+  <h2 style="color:#6a0dad; font-size:2.5rem; margin-bottom:20px;">Get in Touch</h2>
+  <p style="color:#333; font-size:1.1rem; margin-bottom:40px;">
+    I'd love to hear from you! Reach out via email or phone, and let's connect.
   </p>
+
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+    
+    <!-- Email Card -->
+    <a href="mailto:pamelajanetopularbabejes@gmail.com" 
+       style="text-decoration:none; background:#6a0dad; color:white; padding:20px 25px; border-radius:12px; display:flex; align-items:center; gap:15px; font-size:1.2rem; transition:all 0.3s; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      📧 Email
+      <span style="font-size:1.5rem;">✉️</span>
+    </a>
+
+    <!-- Phone Card -->
+    <a href="tel:+639957863021" 
+       style="text-decoration:none; background:#4b0082; color:white; padding:20px 25px; border-radius:12px; display:flex; align-items:center; gap:15px; font-size:1.2rem; transition:all 0.3s; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      📞 Call Me
+      <span style="font-size:1.5rem;">📱</span>
+    </a>
+
+  </div>
 </section>
+
 
   <!-- FOOTER -->
   <footer>
