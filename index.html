@@ -352,71 +352,73 @@
     box-shadow: 0 12px 35px rgba(0,0,0,0.12);
   }
 </style>
-<section id="documentation" style="padding:60px 25px; background:#f3f0ff; border-radius:16px; max-width:1200px; margin:60px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+
+<section id="documentation" style="padding:60px 25px; background:#f3f0ff; border-radius:16px; max-width:1200px; margin:60px auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
   <h2 style="color:#6a0dad; text-align:center; font-size:2.4rem; margin-bottom:20px;">Documentation</h2>
   <p style="margin-bottom:40px; text-align:center; font-size:1.05rem; color:#444;">
     This section showcases key documentation artifacts that I fully led and developed as part of various system analysis and IT projects. 
-    Click the icons to <strong>Preview</strong> or <strong>Download</strong>.
+    Click the buttons to <strong>Preview</strong> or <strong>Download</strong>.
   </p>
 
   <div class="projects" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
 
     <!-- DOC 1 -->
-    <div class="project-card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); display:flex; flex-direction:column; min-height:450px;">
+    <div class="project-card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); display:flex; flex-direction:column; min-height:500px;">
       <h3 style="color:#2d1b4f; margin-bottom:15px; font-size:1.25rem;">PONDMATE: Requirement Specification</h3>
       <p style="color:#444; text-align:justify; flex-grow:1; margin-bottom:20px;">
         I led the full documentation process for this thesis and requirements specification, detailing the functional and non-functional requirements of the PondMate system. 
       </p>
 
       <div style="display:flex; justify-content:center; gap:30px; margin-bottom:10px;">
-        <button onclick="previewPDF('doc1', 'PONDMATE.pdf')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; border:none; background:none;">Preview</button>
+        <button onclick="toggleIframe('iframe1')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; background:none; border:none;">Preview</button>
         <a href="PONDMATE.pdf" download style="color:#4b0082; text-decoration:none; font-weight:600; font-size:1rem;">Download</a>
       </div>
 
-      <iframe id="doc1" width="100%" height="400px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe id="iframe1" src="PONDMATE.pdf" width="100%" height="350px" style="border:1px solid #ccc; border-radius:10px; display:none;"></iframe>
     </div>
 
     <!-- DOC 2 -->
-    <div class="project-card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); display:flex; flex-direction:column; min-height:450px;">
+    <div class="project-card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); display:flex; flex-direction:column; min-height:500px;">
       <h3 style="color:#2d1b4f; margin-bottom:15px; font-size:1.25rem;">Municipal Civil Registrar: Requirement Specification</h3>
       <p style="color:#444; text-align:justify; flex-grow:1; margin-bottom:20px;">
         I led the documentation efforts for this digital record management system, gathering requirements, documenting workflows, and creating system diagrams.
       </p>
 
       <div style="display:flex; justify-content:center; gap:30px; margin-bottom:10px;">
-        <button onclick="previewPDF('doc2', 'Requirement Specification Document.pdf')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; border:none; background:none;">Preview</button>
+        <button onclick="toggleIframe('iframe2')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; background:none; border:none;">Preview</button>
         <a href="Requirement Specification Document.pdf" download style="color:#4b0082; text-decoration:none; font-weight:600; font-size:1rem;">Download</a>
       </div>
 
-      <iframe id="doc2" width="100%" height="400px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe id="iframe2" src="Requirement Specification Document.pdf" width="100%" height="350px" style="border:1px solid #ccc; border-radius:10px; display:none;"></iframe>
     </div>
 
     <!-- DOC 3 -->
-    <div class="project-card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); display:flex; flex-direction:column; min-height:450px;">
+    <div class="project-card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); display:flex; flex-direction:column; min-height:500px;">
       <h3 style="color:#2d1b4f; margin-bottom:15px; font-size:1.25rem;">Sustainable Smart Agriculture: Final Paper</h3>
       <p style="color:#444; text-align:justify; flex-grow:1; margin-bottom:20px;">
         I led all documentation tasks for this research project, producing analytical and technical reports clearly representing workflows and operational processes.
       </p>
 
       <div style="display:flex; justify-content:center; gap:30px; margin-bottom:10px;">
-        <button onclick="previewPDF('doc3', 'Final-Paper_Smart-Agriculture_1-1.pdf')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; border:none; background:none;">Preview</button>
+        <button onclick="toggleIframe('iframe3')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; background:none; border:none;">Preview</button>
         <a href="Final-Paper_Smart-Agriculture_1-1.pdf" download style="color:#4b0082; text-decoration:none; font-weight:600; font-size:1rem;">Download</a>
       </div>
 
-      <iframe id="doc3" width="100%" height="400px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe id="iframe3" src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="350px" style="border:1px solid #ccc; border-radius:10px; display:none;"></iframe>
     </div>
 
   </div>
 </section>
 
 <script>
-  function previewPDF(iframeId, fileUrl) {
-    const iframe = document.getElementById(iframeId);
-    iframe.src = fileUrl;
-    iframe.style.display = 'block';
-    iframe.scrollIntoView({ behavior: 'smooth' });
+  function toggleIframe(id) {
+    const iframe = document.getElementById(id);
+    iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    if (iframe.style.display === 'block') iframe.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
+
 
 
 
