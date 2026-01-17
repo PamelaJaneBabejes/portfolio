@@ -352,12 +352,10 @@
     box-shadow: 0 12px 35px rgba(0,0,0,0.12);
   }
 </style>
-
 <section id="documentation" style="padding:60px 25px; background:#f3f0ff; border-radius:16px; max-width:1200px; margin:60px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
   <h2 style="color:#6a0dad; text-align:center; font-size:2.4rem; margin-bottom:20px;">Documentation</h2>
   <p style="margin-bottom:40px; text-align:center; font-size:1.05rem; color:#444;">
     This section showcases key documentation artifacts that I fully led and developed as part of various system analysis and IT projects. 
-    These documents demonstrate my expertise in requirements analysis, process modeling, system documentation, and technical writing. 
     Click the icons to <strong>Preview</strong> or <strong>Download</strong>.
   </p>
 
@@ -370,13 +368,12 @@
         I led the full documentation process for this thesis and requirements specification, detailing the functional and non-functional requirements of the PondMate system. 
       </p>
 
-      <!-- Centered Buttons -->
       <div style="display:flex; justify-content:center; gap:30px; margin-bottom:10px;">
-        <span onclick="previewPDF('doc1')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem;">Preview</span>
+        <button onclick="previewPDF('doc1', 'PONDMATE.pdf')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; border:none; background:none;">Preview</button>
         <a href="PONDMATE.pdf" download style="color:#4b0082; text-decoration:none; font-weight:600; font-size:1rem;">Download</a>
       </div>
 
-      <iframe id="doc1" data-src="PONDMATE.pdf" width="100%" height="250px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe id="doc1" width="100%" height="400px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
     <!-- DOC 2 -->
@@ -387,11 +384,11 @@
       </p>
 
       <div style="display:flex; justify-content:center; gap:30px; margin-bottom:10px;">
-        <span onclick="previewPDF('doc2')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem;">Preview</span>
+        <button onclick="previewPDF('doc2', 'Requirement Specification Document.pdf')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; border:none; background:none;">Preview</button>
         <a href="Requirement Specification Document.pdf" download style="color:#4b0082; text-decoration:none; font-weight:600; font-size:1rem;">Download</a>
       </div>
 
-      <iframe id="doc2" data-src="Requirement Specification Document.pdf" width="100%" height="250px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe id="doc2" width="100%" height="400px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
     <!-- DOC 3 -->
@@ -402,24 +399,25 @@
       </p>
 
       <div style="display:flex; justify-content:center; gap:30px; margin-bottom:10px;">
-        <span onclick="previewPDF('doc3')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem;">Preview</span>
+        <button onclick="previewPDF('doc3', 'Final-Paper_Smart-Agriculture_1-1.pdf')" style="cursor:pointer; color:#6a0dad; font-weight:600; font-size:1rem; border:none; background:none;">Preview</button>
         <a href="Final-Paper_Smart-Agriculture_1-1.pdf" download style="color:#4b0082; text-decoration:none; font-weight:600; font-size:1rem;">Download</a>
       </div>
 
-      <iframe id="doc3" data-src="Final-Paper_Smart-Agriculture_1-1.pdf" width="100%" height="250px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe id="doc3" width="100%" height="400px" style="display:none; border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
 
   </div>
 </section>
 
 <script>
-  function previewPDF(iframeId) {
+  function previewPDF(iframeId, fileUrl) {
     const iframe = document.getElementById(iframeId);
-    if (!iframe.src) iframe.src = iframe.dataset.src;
-    iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
-    if (iframe.style.display === 'block') iframe.scrollIntoView({ behavior: 'smooth' });
+    iframe.src = fileUrl;
+    iframe.style.display = 'block';
+    iframe.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
+
 
 
 
